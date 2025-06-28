@@ -1,0 +1,1214 @@
+---
+title: "Auto Question Generation for Arrays and Linked Lists"
+# author: "Your Name"
+# date: today
+# date-format: long
+number-sections: true
+number-depth: 2
+# jupyter: python3
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-title: "On this page"
+    number-sections: true
+    number-depth: 2
+    html-math-method: katex
+    embed-resources: true
+---
+
+
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+Auto-question generation algorithms must first be designed individually for the following topics. Next, you need to find ways to generalize the algorithms so there are fewer, as a generalized algorithm provides auto-question generation for multiple topics.
+
+For each topic, generate questions of increasing difficulty (level 1 questions are the easiest, level 2 questions are a little challenging, and so on.)
+
+As you design auto-question generation algorithms, explore ways to incorporate generative and predictive AI into the algorithms.
+
+# One-Dimensional Arrays
+
+A one-dimensional array (or 1D array) is a linear data structure where elements are stored contiguously in memory. Unlike lists in Python, which are dynamic and heterogeneous, arrays in Python (from the array module or NumPy) provide a more memory-efficient way to store and manipulate homogeneous data types.
+
+Key characteristics of arrays: 
+
+- Fixed-size (for array.array and NumPy arrays).
+
+- Homogeneous elements (only one data type).
+
+- Efficient element access using indices.
+
+- Supports various operations (insertion, deletion, traversal, searching, sorting).
+
+## Creating and Using One-Dimensional Arrays in Python
+
+Python provides multiple ways to create 1D arrays.
+
+Using Python's array Module:
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+import array
+
+# Creating an integer array
+arr = array.array('i', [1, 2, 3, 4, 5])
+
+# Printing the array
+print("Array:", arr.tolist())
+```
+
+Using NumPy Arrays (more efficient):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+
+import numpy as np
+
+# Creating a NumPy array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Printing the array
+print("NumPy Array:", arr)
+```
+
+## Memory Layout of a One-Dimensional Array
+
+```{mermaid}
+graph LR;
+    A[Array Start Address] -->|Index 0| B[10]
+    B -->|Index 1| C[20]
+    C -->|Index 2| D[30]
+    D -->|Index 3| E[40]
+    E -->|Index 4| F[50]
+```
+
+## Memory Address Calculation
+
+If the base address of an array is $B$ and each element occupies $s$ bytes, the memory address of element at index $i$ is: $\text{Address } (A[i]) = B + (i \times s)$.
+
+For example, in an integer array where each element takes 4 bytes and base address is 1000:
+
+
+| Index $(i)$ | Element | Memory Address |
+|:-----:|:-----:|:-----:|
+| 0 | 10 | 1000 |
+| 1 | 20 | 1004 |
+| 2 | 30 | 1008 |
+| 3 | 40 | 1012 |
+| 4 | 50 | 1016 |
+
+
+
+## Operations on One-Dimensional Arrays
+
+Traversing an array ($O(n)$):
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+
+arr = array.array('i', [10, 20, 30, 40, 50])
+for i in arr:
+    print(i, end=" ")
+```
+
+Accessing elements ($O(1)$): 
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+
+print("Element at index 2:", arr[2])  # Output: 30
+```
+
+Inserting an element ($O(n)$): Insertion at end is $O(1)$, while insertion at an arbitrary position requires shifting elements ($O(n)$).
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+
+arr.insert(2, 25)  # Insert 25 at index 2
+print(arr.tolist())  # Output: [10, 20, 25, 30, 40, 50]
+```
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+
+```
+
+Deleting an element ($O(n)$):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+
+arr.remove(30)  # Removes first occurrence of 30
+print(arr.tolist())  # Output: [10, 20, 25, 40, 50]
+```
+
+Searching for an element ($O(n)$ for Linear Search, $O(\log n)$ for Binary Search).
+
+Linear Search:
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i  # Return index of found element
+    return -1  # Not found
+
+index = linear_search(arr, 40)
+print("Index of 40:", index)  # Output: 3
+```
+
+Binary Search (Only for sorted arrays, $O(log n)$):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1  # Not found
+
+index = binary_search(arr.tolist(), 40)
+print("Index of 40:", index)  # Output: 3
+```
+
+Sorting an array ($O(n \log n)$):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+
+sorted_arr = sorted(arr)
+print("Sorted Array:", sorted_arr)
+```
+
+## Complexity Analysis of 1D Array Operations
+
+
+| Operation | Best Case | Worst Case | Explanation |
+|:-------|:----------|:---------|:-----------|
+| Access | $O(1)$ | $O(1)$ | Direct access using index |
+| Insertion | $O(1)$ | $O(n)$ | End insert is $O(1)$, middle insert requires shifting |
+| Deletion | $O(1)$ | $O(n)$ | End delete is $O(1)$, middle delete requires shifting |
+| Searching (Linear) | $O(1)$ | $O(n)$ | Best case: first element, Worst case: last element |
+| Searching (Binary) | $O(1)$ | $O(\log n)$ | Only for sorted arrays |
+| Sorting | $O(n \log n)$ | $O(n \log n)$ | QuickSort or MergeSort |
+
+<br/>
+
+
+## Generating Unlimited Questions on 1D Arrays
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+
+import random
+
+def generate_array_question():
+    difficulty = random.choice(["Easy", "Medium", "Hard"])
+    arr = random.sample(range(1, 50), 7)  # Random 7-element array
+
+    if difficulty == "Easy":
+        question = f"Given the array {arr}, what is the element at index {random.randint(0, 6)}?"
+        answer = arr[random.randint(0, 6)]
+    
+    elif difficulty == "Medium":
+        target = random.choice(arr)
+        question = f"Find the index of {target} in the array {arr} using linear search."
+        answer = arr.index(target)
+    
+    else:  # Hard level
+        question = f"Sort the array {arr} and find the median."
+        sorted_arr = sorted(arr)
+        answer = sorted_arr[len(sorted_arr) // 2]
+
+    return question, answer
+
+# Generate 5 example questions
+for _ in range(5):
+    q, a = generate_array_question()
+    print("\nQuestion:", q)
+    print("Answer:", a)
+```
+
+
+
+# Two-Dimensional Arrays
+
+A two-dimensional array (2D array) is a matrix-like data structure where elements are stored in a grid of rows and columns. It is used in various applications such as image processing, graphs, dynamic programming, and simulations.
+
+
+Key Characteristics:
+
+- Fixed-size structure (for arrays).
+
+- Homogeneous elements (same data type).
+
+- Row-major vs Column-major storage.
+
+- Efficient direct access using indices.
+
+- Supports operations like insertion, deletion, traversal, searching, and sorting.
+
+
+Applications of 2D arrays:
+
+- Image processing (grayscale images as 2D arrays)
+
+- Graph representations (Adjacency Matrix)
+
+- Game development (Grids in board games)
+
+- Dynamic Programming (Memoization tables)
+
+
+## Representing 2D Arrays in Python
+
+Python does not have built-in 2D arrays like C or Java, but we can use lists of lists or NumPy arrays.
+
+Using nested lists:
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+# Creating a 3x3 matrix using lists
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Accessing an element
+print("Element at row 1, column 2:", matrix[1][2])  # Output: 6
+```
+
+Using NumPy for efficiency:
+
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+import numpy as np
+
+# Creating a 3x3 NumPy array
+matrix = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+
+# Accessing an element
+print("Element at row 1, column 2:", matrix[1, 2])  # Output: 6
+```
+
+## Memory Layout of a Two-Dimensional Array
+
+
+- **Row-major order**: Elements are stored row-by-row in contiguous memory.
+
+- **Column-major order**: Elements are stored column-by-column in contiguous memory.
+
+Illustration of 2D array storage (row-major):
+
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Create a 3x3 matrix
+matrix = np.array([
+    [111, 212, 373],
+    [432, 345, 612],
+    [747, 878, 943]
+])
+
+# Plot the matrix
+fig, ax = plt.subplots()
+ax.matshow(matrix, cmap="coolwarm")
+
+# Annotate the matrix elements
+for i in range(matrix.shape[0]):
+    for j in range(matrix.shape[1]):
+        ax.text(j, i, str(matrix[i, j]), va='center', ha='center', fontsize=8, color='black')
+
+plt.title("2D Array Representation")
+plt.show()
+```
+
+## Operations on Two-Dimensional Arrays
+
+Traversing a 2D array ($O(mn)$)
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+rows, cols = len(matrix), len(matrix[0])
+for i in range(rows):
+    for j in range(cols):
+        print(matrix[i][j], end=" ")
+    print()
+```
+
+Accessing elements ($O(1)$)
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+print(matrix[1][2])  # Output: 6
+```
+
+Inserting an element ($O(n)$ or $O(mn)$ depending on operation):
+
+
+```{python}
+#| echo: TRUE
+#| eval: FALSE
+#| code-overflow: wrap
+matrix[1].insert(1, 99)  # Insert 99 at row 1, column 1
+print(matrix)
+```
+
+Deleting an element ($O(n)$ or $O(mn)$):
+
+
+```{python}
+#| echo: TRUE
+#| eval: FALSE
+#| code-overflow: wrap
+del matrix[1][2]  # Delete element at row 1, column 2
+print(matrix)
+```
+
+Searching an element ($O(mn)$ for Linear Search):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def search_matrix(matrix, target):
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            if matrix[i][j] == target:
+                return (i, j)
+    return None
+
+print(search_matrix(matrix, 6))  # Output: (1,2)
+```
+
+Sorting a 2D array (Flatten, Sort, Reshape):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+sorted_matrix = np.sort(matrix, axis=None).reshape(matrix.shape)
+print(sorted_matrix)
+```
+
+Complexity analysis of 2D array operations:
+
+| Operation | Best Case | Worst Case | Explanation |
+|:---:|:---:|:---:|:---------:|
+| Access | $O(1)$ | $O(1)$ | Direct access using indices |
+| Insertion | $O(1)$ | $O(mn)$ | Adding row/column is $O(m)$, modifying elements is $O(1)$ |
+| Deletion | $O(1)$ | $O(mn)$ | Removing row/column shifts elements (O(m)) |
+| Searching (Linear) | $O(1)$ | $O(mn)$ | Best case: first element, Worst case: last element |
+| Sorting | $O(mn \log mn)$ | $O(mn \log mn)$ | Sorting a flattened array |
+
+<br/>
+
+
+## Generating Unlimited 2D Array Questions
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+import random
+
+def generate_2d_array_question():
+    difficulty = random.choice(["Easy", "Medium", "Hard"])
+    matrix = [[random.randint(1, 50) for _ in range(4)] for _ in range(4)]  # 4x4 random matrix
+
+    if difficulty == "Easy":
+        row, col = random.randint(0, 3), random.randint(0, 3)
+        question = f"Given the 2D array:\n{matrix}\nWhat is the element at row {row}, column {col}?"
+        answer = matrix[row][col]
+
+    elif difficulty == "Medium":
+        target = random.choice(random.choice(matrix))
+        question = f"Find the position (row, col) of {target} in the following 2D array:\n{matrix}"
+        for i in range(4):
+            for j in range(4):
+                if matrix[i][j] == target:
+                    answer = (i, j)
+
+    else:  # Hard level
+        question = f"Sort the following 2D array row-wise and return the sorted array:\n{matrix}"
+        answer = [sorted(row) for row in matrix]
+
+    return question, answer
+
+# Generate 5 example questions
+for _ in range(5):
+    q, a = generate_2d_array_question()
+    print("\nQuestion:", q)
+    print("Answer:", a)
+```
+
+
+# Singly Linked Lists
+
+A Singly Linked List (SLL) is a linear data structure where each element (node) points to the next node in sequence. Unlike arrays, linked lists provide dynamic memory allocation and efficient insertions/deletions but have higher access time due to sequential traversal.
+
+Key characteristics of SLL:
+
+- Dynamic size (No pre-allocation required).
+
+- Efficient Insertions & Deletions ($O(1)$ for head insertions, $O(n)$ for tail insertions).
+
+- Sequential Access ($O(n)$ for searches).
+
+- Consumes extra memory (Each node stores a pointer/reference to the next node).
+
+
+Singly Linked List use cases:
+
+- Memory-efficient dynamic data storage (Avoids reallocation costs like arrays).
+
+- Efficient Insertions & Deletions (Used in undo/redo stacks, caches).
+
+- Used in Hash Tables & Graphs (Chaining in hash tables, adjacency lists).
+
+
+## Structure of a Singly Linked List
+
+Each node in a singly linked list consists of:
+
+- Data: The actual value.
+
+- Pointer (Next): A reference to the next node.
+
+Node representation in Python:
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+class Node:
+    def __init__(self, data):
+        self.data = data  # Stores the data
+        self.next = None  # Pointer to the next node
+```
+
+Linked List representation:
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None  # Initially, the list is empty
+```
+
+## Visualizing Singly Linked List
+
+```{mermaid}
+graph LR
+    START:::hidden --> |Rear|A(10)
+    A --> B(20)
+    B --> C(30)
+    C --> D(40)
+    D --> E(Head)
+    
+    classDef hidden display: none;
+```
+
+
+## Operations on a Singly Linked List
+
+Traversing a Linked List ($O(n)$):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def traverse(self):
+    current = self.head
+    while current:
+        print(current.data, end=" -> ")
+        current = current.next
+    print("None")
+```
+
+Insert at head ($O(1)$):
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def insert_at_head(self, data):
+    new_node = Node(data)
+    new_node.next = self.head
+    self.head = new_node
+```
+
+Insert at tail ($O(n)$):
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def insert_at_tail(self, data):
+    new_node = Node(data)
+    if self.head is None:
+        self.head = new_node
+        return
+    temp = self.head
+    while temp.next:
+        temp = temp.next
+    temp.next = new_node
+```
+
+Delete from head ($O(1)$):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def delete_head(self):
+    if self.head:
+        self.head = self.head.next
+```
+
+Delete a specific node ($O(n)$):
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def delete_node(self, key):
+    temp = self.head
+    if temp and temp.data == key:
+        self.head = temp.next
+        return
+    prev = None
+    while temp and temp.data != key:
+        prev = temp
+        temp = temp.next
+    if temp:
+        prev.next = temp.next
+```
+
+Searching for an element ($O(n)$):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def search(self, key):
+    temp = self.head
+    while temp:
+        if temp.data == key:
+            return True
+        temp = temp.next
+    return False
+```
+
+## Complexity Analysis of SLL Operations
+
+
+| Operation | Best Case | Worst Case  Explanation |
+|:-------|:----:|:-----:|:------------|
+| Traversal | $O(n)$ | $O(n)$ | Requires visiting each node. |
+| Insert at head | $O(1)$ | $O(1)$ | Only requires pointer update. |
+| Insert at tail | $O(n)$ | $O(n)$ | Requires traversing to the last node. |
+| Deletion (head) | $O(1)$ | $O(1)$ | Just moves head pointer. |
+| Deletion (specific node) | $O(1)$ | $O(n)$ | If node is at head, $O(1)$, otherwise $O(n)$. |
+| Searching  | $O(1)$ | $O(n)$ | Best case: first node, Worst case: last node. |
+
+## Auto-generating linked list questions
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+import random
+
+def generate_linked_list_question():
+    difficulty = random.choice(["Easy", "Medium", "Hard"])
+    values = random.sample(range(1, 100), 6)  # Random list of values
+
+    if difficulty == "Easy":
+        question = f"Given the linked list {values}, what is the element at the head?"
+        answer = values[0]
+
+    elif difficulty == "Medium":
+        target = random.choice(values)
+        question = f"Find the position (index) of {target} in the linked list {values}."
+        answer = values.index(target)
+
+    else:  # Hard level
+        question = f"Delete the node with value {values[2]} from the linked list {values} and return the new list."
+        new_list = values[:2] + values[3:]  # Simulating deletion
+        answer = new_list
+
+    return question, answer
+
+# Generate 5 example questions
+for _ in range(5):
+    q, a = generate_linked_list_question()
+    print("\nQuestion:", q)
+    print("Answer:", a)
+```
+
+
+# Doubly Linked Lists (DLLs)
+
+A Doubly Linked List (DLL) is a linear data structure where each node has two pointers:
+
+- One pointing to the next node (like a singly linked list).
+
+- One pointing to the previous node.
+
+Key characteristics of DLLs:
+
+- Bidirectional traversal: Can be traversed forward and backward.
+
+- Efficient insertions and deletions: $O(1)$ at the head or tail, unlike singly linked lists where tail operations take $O(n)$.
+
+- More memory overhead: Each node stores an additional pointer ($O(2n)$ vs. $O(n)$ in SLL).
+
+- Used in advanced data structures: Used in LRU Caches, Undo/Redo operations, and Tree implementations.
+
+
+Doubly Linked Lists use cases:
+
+- Memory-efficient data management (Browser history, Undo/Redo)
+
+- Efficient insertion and deletion (Used in LRU Cache, Graph algorithms)
+
+- Used in complex data structures (Balanced Trees, Priority Queues)
+
+Each node consists of:
+
+- Data: The actual value stored.
+
+- **Previous pointer** (prev): Points to the previous node.
+
+- **Next pointer** (next): Points to the next node.
+
+Python representation of a DLL node:
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+class Node:
+    def __init__(self, data):
+        self.data = data  # Store the data
+        self.prev = None  # Pointer to previous node
+        self.next = None  # Pointer to next node
+```
+
+Doubly Linked List class:
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None  # Initially, the list is empty
+```
+
+
+## Illustration of a Doubly Linked List
+
+```{mermaid}
+graph LR;
+    START:::hidden --> |Head|A(10)
+    A --> B(20);
+    B --> C(30);
+    C --> D(40);
+    D ---> E(None);
+
+    B --> A;
+    C --> B;
+    D --> C;
+    E --> D;
+
+    classDef hidden display: none;
+    
+    style A fill:#add8e6,stroke:#000,stroke-width:2px;
+    style B fill:#add8e6,stroke:#000,stroke-width:2px;
+    style C fill:#add8e6,stroke:#000,stroke-width:2px;
+    style D fill:#add8e6,stroke:#000,stroke-width:2px;
+    style E fill:#f4cccc,stroke:#000,stroke-width:2px;
+
+    linkStyle 0 stroke:#0074D9,stroke-width:2px;
+    linkStyle 1 stroke:#0074D9,stroke-width:2px;
+    linkStyle 2 stroke:#0074D9,stroke-width:2px;
+    linkStyle 3 stroke:#0074D9,stroke-width:2px;
+    linkStyle 4 stroke:#0074D9,stroke-width:2px;
+
+    linkStyle 5 stroke:#FF4136,stroke-width:2px;
+    linkStyle 6 stroke:#FF4136,stroke-width:2px;
+    linkStyle 7 stroke:#FF4136,stroke-width:2px;
+    linkStyle 8 stroke:#FF4136,stroke-width:2px;
+```
+
+
+## Operations on a Doubly Linked List
+
+Traversing a DLL ($O(n)$):
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def traverse(self):
+    current = self.head
+    while current:
+        print(current.data, end=" <-> ")
+        current = current.next
+    print("None")
+```
+
+Insert at head ($O(1)$):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def insert_at_head(self, data):
+    new_node = Node(data)
+    new_node.next = self.head
+    if self.head:
+        self.head.prev = new_node
+    self.head = new_node
+```
+
+Insert at tail ($O(1)$ if tail pointer exists, $O(n)$ otherwise)
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def insert_at_tail(self, data):
+    new_node = Node(data)
+    if self.head is None:
+        self.head = new_node
+        return
+    temp = self.head
+    while temp.next:
+        temp = temp.next
+    temp.next = new_node
+    new_node.prev = temp
+```
+
+Delete from head ($O(1)$)
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def delete_head(self):
+    if self.head:
+        self.head = self.head.next
+        if self.head:
+            self.head.prev = None
+```
+
+Delete a specific node ($O(1)$ if reference provided, $O(n)$ if searched)
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def delete_node(self, key):
+    temp = self.head
+    while temp and temp.data != key:
+        temp = temp.next
+    if temp is None:
+        return  # Key not found
+    if temp.prev:
+        temp.prev.next = temp.next
+    if temp.next:
+        temp.next.prev = temp.prev
+    if temp == self.head:
+        self.head = temp.next
+```
+
+
+Searching for an element ($O(n)$):
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def search(self, key):
+    temp = self.head
+    while temp:
+        if temp.data == key:
+            return True
+        temp = temp.next
+    return False
+```
+
+## Complexity Analysis of DLL Operations
+
+| Operation | Best Case | Worst Case | Explanation |
+|:------|:----:|:----:|:-----------|
+| Traversal | $O(n)$ | $O(n)$ | Must visit all nodes |
+| Insert at head | $O(1)$ | $O(1)$ | Constant-time operation |
+| Insert at tail | $O(1)$ | $O(n)$ | If tail pointer exists, $O(1)$; otherwise, $O(n)$ |
+| Deletion (head) | $O(1)$ | $O(1)$ | Just moves head pointer |
+| Deletion (specific node) | $O(1)$ | $O(n)$ | If node is referenced directly, $O(1)$; otherwise, $O(n)$ |
+| Searching  | $O(1)$ | $O(n)$ | Best case: first node, Worst case: last node |
+
+## Auto-Generating Doubly Linked List Questions
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+import random
+
+def generate_doubly_linked_list_question():
+    difficulty = random.choice(["Easy", "Medium", "Hard"])
+    values = random.sample(range(1, 100), 6)  # Random list of values
+
+    if difficulty == "Easy":
+        question = f"Given the doubly linked list {values}, what is the element at the head?"
+        answer = values[0]
+
+    elif difficulty == "Medium":
+        target = random.choice(values)
+        question = f"Find the position (index) of {target} in the doubly linked list {values}."
+        answer = values.index(target)
+
+    else:  # Hard level
+        question = f"Delete the node with value {values[2]} from the doubly linked list {values} and return the new list."
+        new_list = values[:2] + values[3:]  # Simulating deletion
+        answer = new_list
+
+    return question, answer
+
+# Generate 5 example questions
+for _ in range(5):
+    q, a = generate_doubly_linked_list_question()
+    print("\nQuestion:", q)
+    print("Answer:", a)
+```
+
+
+# Circular Linked Lists (CLLs)
+
+A Circular Linked List (CLL) is a variation of a linked list where:
+
+- The last node points back to the first node, forming a circular structure.
+
+- Can be singly circular linked list (SCLL) or doubly circular linked list (DCLL).
+
+- Efficient for cyclic processes like CPU scheduling and memory buffer management.
+
+Key characteristics of CLLs:
+
+- No NULL end: The last node's next pointer connects back to the head.
+
+- Efficient traversals: Can loop infinitely if not handled properly.
+
+- Fast insertions & deletions: $O(1)$ for head/tail insertions (when tail pointer is maintained).
+
+- Used in real-world applications:
+
+    - Operating Systems (Round-robin CPU scheduling)
+
+    - Music Playlists (Looping through songs)
+
+    - Network Buffers (Streaming applications)
+
+    - Memory Allocation (Managing free memory blocks)
+
+
+## Structure of a Circular Linked List
+
+Each node consists of:
+
+- Data: The actual value stored.
+
+- Next Pointer (next): Points to the next node (for SCLL).
+
+- Previous Pointer (prev) (Only in DCLL): Points to the previous node.
+
+Python representation of a CLL Node:
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+class Node:
+    def __init__(self, data):
+        self.data = data  # Store the data
+        self.next = None  # Pointer to the next node
+```
+
+Circular Linked List Class:
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None  # Initially, the list is empty
+```
+
+Illustration of a Circular Linked List:
+
+- Each node contains a data value (10, 20, 30, 40).
+
+- Last node (40) points back to the first node (10).
+
+- This forms a circular structure with no NULL at the end.
+
+```{mermaid}
+graph LR
+    START:::hidden --> |Head|A(10)
+    A --> B(20)
+    B --> C(30)
+    C --> D(40)
+    D --> A
+
+    classDef hidden display: none;
+```
+
+##  Operations on a Circular Linked List
+
+Traversing ($O(n)$):
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def traverse(self):
+    if not self.head:
+        return "List is empty"
+    current = self.head
+    while True:
+        print(current.data, end=" → ")
+        current = current.next
+        if current == self.head:  # Stop when full circle is completed
+            break
+    print("(back to head)")
+```
+
+Insert at head ($O(1)$):
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def insert_at_head(self, data):
+    new_node = Node(data)
+    if not self.head:
+        self.head = new_node
+        new_node.next = self.head  # Point to itself
+    else:
+        temp = self.head
+        while temp.next != self.head:
+            temp = temp.next
+        temp.next = new_node
+        new_node.next = self.head
+        self.head = new_node
+```
+
+Insert at tail ($O(n)$ without tail pointer, $O(1)$ with tail pointer):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def insert_at_tail(self, data):
+    new_node = Node(data)
+    if not self.head:
+        self.head = new_node
+        new_node.next = self.head  # Circular link to itself
+    else:
+        temp = self.head
+        while temp.next != self.head:
+            temp = temp.next
+        temp.next = new_node
+        new_node.next = self.head
+```
+
+Delete from head ($O(n)$ if tail pointer is not maintained):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def delete_head(self):
+    if not self.head:
+        return
+    if self.head.next == self.head:
+        self.head = None  # Only one node case
+    else:
+        temp = self.head
+        while temp.next != self.head:
+            temp = temp.next
+        temp.next = self.head.next
+        self.head = self.head.next
+```
+
+Delete a specific node ($O(n)$):
+
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def delete_node(self, key):
+    if not self.head:
+        return
+    temp = self.head
+    prev = None
+
+    while True:
+        if temp.data == key:
+            if prev:
+                prev.next = temp.next
+            else:  # Deleting head node
+                self.head = temp.next
+            return
+        prev = temp
+        temp = temp.next
+        if temp == self.head:  # Stop if we complete a cycle
+            break
+```
+
+Searching for an element ($O(n)$):
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+def search(self, key):
+    temp = self.head
+    while True:
+        if temp.data == key:
+            return True
+        temp = temp.next
+        if temp == self.head:
+            return False
+```
+
+
+## Complexity Analysis of CLL Operations
+
+| Operation | Best Case | Worst Case | Explanation |
+|:-----|:---:|:----:|:-----------|
+| Traversal | $O(n)$ | $O(n)$ | Must visit all nodes |
+| Insert at head | $O(1)$ | $O(1)$ | Constant-time operation |
+| Insert at tail | $O(1)$ | $O(n)$ | If tail pointer exists, $O(1)$; otherwise, $O(n)$ |
+| Deletion (head) | $O(1)$ | $O(n)$ | Requires updating the last node |
+| Deletion (specific node) | $O(1)$ | $O(n)$ | If node is referenced directly, $O(1)$; otherwise, $O(n)$ |
+| Searching |  $O(1)$ | $O(n)$ | Best case: first node, Worst case: last node |
+
+
+## Auto-generating Circular Linked List Questions
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+#| code-overflow: wrap
+import random
+
+def generate_circular_linked_list_question():
+    difficulty = random.choice(["Easy", "Medium", "Hard"])
+    values = random.sample(range(1, 100), 6)  # Random list of values
+
+    if difficulty == "Easy":
+        question = f"Given the circular linked list {values}, what is the element at the head?"
+        answer = values[0]
+
+    elif difficulty == "Medium":
+        target = random.choice(values)
+        question = f"Find the position (index) of {target} in the circular linked list {values}."
+        answer = values.index(target)
+
+    else:  # Hard level
+        question = f"Delete the node with value {values[2]} from the circular linked list {values} and return the new list."
+        new_list = values[:2] + values[3:]  # Simulating deletion
+        answer = new_list
+
+    return question, answer
+
+# Generate 5 example questions
+for _ in range(5):
+    q, a = generate_circular_linked_list_question()
+    print("\nQuestion:", q)
+    print("Answer:", a)
+```
+
+
