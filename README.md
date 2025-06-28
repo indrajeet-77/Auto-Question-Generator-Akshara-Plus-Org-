@@ -9,7 +9,7 @@ A Flask-based web application that automatically generates and serves questions 
 - 🔍 Load and filter questions based on:
   - **Topic**: Arrays, Linked Lists, Trees
   - **Difficulty**: 1 (Easy), 2 (Intermediate), 3 (Advance)
-- 🔄 Randomized question selection
+- 🔄 Randomized question selection and generation  bases on predefined questions
 - ✅ View questions and answers via frontend
 - 📁 CSV-based question storage (easy to update)
 - 🧩 Modular code design for easy extension
@@ -76,9 +76,10 @@ Auto-Question-Generator/
    
    Visit http://127.0.0.1:5000/ in your browser.
 ## ⚙️ Core Functions
-load_questions(): Reads question data from CSV file.
+- load_questions(): Reads question data from CSV file.
 
-filter_questions(topic, difficulty, num_questions): Filters and samples questions based on user input.
+- filter_questions(topic, difficulty, num_questions): Filters and samples questions based on user input.
+- generate_sample_question.py : Generates random questions
 
 ## 📌 Contribution
 Feel free to fork the repo, raise issues, or submit pull requests. Suggestions and improvements are welcome!
