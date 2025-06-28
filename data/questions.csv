@@ -1,0 +1,858 @@
+id,topic,difficulty,question,answer
+1,Array,1,"Given an array [VALUES], what is the element at index 2?",The element at index 2 is [VALUE]. Remember that array indexing starts at 0 in most programming languages.
+2,Array,1,What is the length of the array [VALUES]?,The length of the array is [LENGTH].
+3,Array,1,Find the sum of all elements in the array [VALUES].,The sum of all elements is [SUM].
+4,Array,1,Find the largest element in the array [VALUES].,The largest element in the array is [MAX].
+5,Array,1,Find the smallest element in the array [VALUES].,The smallest element in the array is [MIN].
+6,Array,1,"If we reverse the array [VALUES], what would be the result?",The reversed array would be [REVERSED].
+7,Array,1,"Given the array [VALUES], what would be the result after sorting in ascending order?",The sorted array would be [SORTED].
+8,Array,1,"Given the array [VALUES], calculate the average of all elements.",The average of all elements is [AVERAGE].
+9,Array,1,"In the array [VALUES], how many elements are greater than 50?",Count each element greater than 50 to get the answer.
+10,Array,1,"If we add 10 to each element in the array [VALUES], what would be the result?",Add 10 to each element: the result would be a new array with each element increased by 10.
+11,Array,1,Find the first occurrence of the maximum element in array [VALUES].,The first occurrence of the maximum element [MAX] is at index [MAX_INDEX].
+12,Array,1,"Given array [VALUES], find all even numbers.",The even numbers in the array are: [EVEN_NUMBERS].
+13,Array,1,What is the product of the first three elements in array [VALUES]?,The product of the first three elements is [PRODUCT_FIRST_THREE].
+14,Array,1,"Given array [VALUES], count how many elements are odd.",Count each odd element to get the total number of odd elements.
+15,Array,1,Find the difference between the maximum and minimum elements in array [VALUES].,The difference between max ([MAX]) and min ([MIN]) is [DIFFERENCE].
+16,Array,1,"Given array [VALUES], what is the sum of the first five elements?",Sum the first five elements of the array to get [SUM_FIRST_FIVE].
+17,Array,1,"Given array [VALUES], what is the last element?",The last element is [LAST_ELEMENT].
+18,Array,1,"Given array [VALUES], what is the index of the minimum element?",The index of the minimum element [MIN] is [MIN_INDEX].
+19,Array,1,"Given array [VALUES], what is the result if you remove the first element?",Remove the first element to get [WITHOUT_FIRST].
+20,Array,1,"Given array [VALUES], what is the result if you remove the last element?",Remove the last element to get [WITHOUT_LAST].
+21,Array,1,"Given array [VALUES], what is the sum of all even elements?",Sum all even elements in the array to get [SUM_EVEN].
+22,Array,1,"Given array [VALUES], what is the sum of all odd elements?",Sum all odd elements in the array to get [SUM_ODD].
+23,Array,1,"Given array [VALUES], what is the average of the first three elements?",The average of the first three elements is [AVG_FIRST_THREE].
+24,Array,1,"Given array [VALUES], what is the median value?",Sort the array and find the middle value(s): [MEDIAN].
+25,Array,1,"Given array [VALUES], what is the mode (most frequent element)?",The mode of the array is [MODE].
+26,Array,1,"Given array [VALUES], what is the result after doubling each element?",Double each element to get [DOUBLED].
+27,Array,1,"Given array [VALUES], what is the result after squaring each element?",Square each element to get [SQUARED].
+28,Array,1,"Given array [VALUES], what is the sum of elements at even indices?","Sum elements at indices 0, 2, 4, ... to get [SUM_EVEN_INDICES]."
+29,Array,1,"Given array [VALUES], what is the sum of elements at odd indices?","Sum elements at indices 1, 3, 5, ... to get [SUM_ODD_INDICES]."
+30,Array,1,"Given array [VALUES], what is the maximum difference between any two elements?",The maximum difference is [MAX_DIFF].
+31,Array,1,"Given array [VALUES], what is the minimum positive element?",The minimum positive element is [MIN_POSITIVE].
+32,Array,1,"Given array [VALUES], what is the result after removing all negative numbers?",Remove all negative numbers to get [NO_NEGATIVES].
+33,Array,1,"Given array [VALUES], what is the result after removing all zeros?",Remove all zeros to get [NO_ZEROS].
+34,Array,1,"Given array [VALUES], what is the sum of the largest and smallest elements?",Sum the largest ([MAX]) and smallest ([MIN]) elements to get [SUM_MAX_MIN].
+35,Array,1,"Given array [VALUES], what is the result after inserting 100 at index 1?",Insert 100 at index 1 to get [INSERTED_100].
+36,Array,1,"Given array [VALUES], what is the result after removing the element at index 3?",Remove the element at index 3 to get [REMOVED_INDEX_3].
+37,Array,1,"Given array [VALUES], what is the sum of elements between indices 2 and 5 (inclusive)?",Sum elements from index 2 to 5 to get [SUM_2_5].
+38,Array,1,"Given array [VALUES], what is the result after sorting in descending order?",Sort the array in descending order to get [SORTED_DESC].
+39,Array,1,"Given array [VALUES], what is the result after rotating left by 1 position?",Rotate left by 1 to get [ROTATED_LEFT_1].
+40,Array,1,"Given array [VALUES], what is the result after rotating right by 1 position?",Rotate right by 1 to get [ROTATED_RIGHT_1].
+41,Array,1,"Given array [VALUES], what is the sum of the first and last elements?",Sum the first ([FIRST_ELEMENT]) and last ([LAST_ELEMENT]) elements to get [SUM_FIRST_LAST].
+42,Array,1,"Given array [VALUES], what is the result after removing all duplicate elements?",Remove duplicates to get [NO_DUPLICATES].
+43,Array,1,"Given array [VALUES], what is the result after reversing only the first three elements?",Reverse the first three elements to get [REVERSED_FIRST_THREE].
+44,Array,1,"Given array [VALUES], what is the result after swapping the first and last elements?",Swap first and last elements to get [SWAPPED_FIRST_LAST].
+45,Array,1,"Given array [VALUES], what is the result after multiplying each element by its index?",Multiply each element by its index to get [MULTIPLIED_BY_INDEX].
+46,Array,1,"Given array [VALUES], what is the result after removing all elements greater than 50?",Remove all elements greater than 50 to get [NO_GREATER_50].
+47,Array,2,"Given the array [VALUES], find the indices of all elements that are even numbers.",Iterate through the array and collect indices where arr[i] % 2 == 0.
+48,Array,2,"In the array [VALUES], find the second largest element.",Sort the array or use two variables to track largest and second largest: [SECOND_MAX].
+49,Array,2,"Given the array [VALUES], find the product of all elements.",Multiply all elements together: [PRODUCT].
+50,Array,2,"In the array [VALUES], calculate the running sum (cumulative sum).",Create a new array where each element is the sum of all previous elements including current.
+51,Array,2,"Given the array [VALUES], find the median value.",Sort the array and find the middle element(s): [MEDIAN].
+52,Array,2,"In the array [VALUES], find all pairs of elements that sum to 100.","Use nested loops or hash map to find pairs (i,j) where arr[i] + arr[j] = 100."
+53,Array,2,"Given the array [VALUES], rotate it to the right by 2 positions.","Move elements: last 2 elements move to front, others shift right."
+54,Array,2,"In the array [VALUES], find the majority element (appears more than n/2 times).",Use Boyer-Moore algorithm or count frequencies to find element appearing > n/2 times.
+55,Array,2,"Given the array [VALUES], remove all duplicates and return the new array.",Use a set or hash map to track seen elements and build new array.
+56,Array,2,"In the array [VALUES], find the longest sequence of consecutive increasing numbers.","Iterate and track current sequence length, update maximum when sequence breaks."
+57,Array,2,"Given array [VALUES], find the subarray with maximum sum using Kadane's algorithm.","Use dynamic programming: track current_sum and max_sum, reset current_sum when negative."
+58,Array,2,"In array [VALUES], find the missing number if it contains n-1 distinct numbers from 1 to n.",Use sum formula: expected_sum - actual_sum = missing number.
+59,Array,2,"Given array [VALUES], implement binary search to find target element 50.","Sort array first, then use divide and conquer: compare middle with target."
+60,Array,2,"In array [VALUES], find the peak element (greater than its neighbors).","Check each element with its neighbors, or use binary search approach."
+61,Array,2,"Given array [VALUES], merge it with another sorted array efficiently.",Use two pointers technique to merge in O(n+m) time.
+62,Array,2,"Given the array [VALUES], find the minimum difference between any two elements.",Sort the array and find the minimum difference between consecutive elements: [MIN_DIFF].
+63,Array,2,"Given the array [VALUES], find the longest subarray with all unique elements.",Use a sliding window to track the longest subarray with unique elements: [LONGEST_UNIQUE].
+64,Array,2,"Given the array [VALUES], find the number of inversions (i < j and arr[i] > arr[j]).","Count all pairs (i, j) where i < j and arr[i] > arr[j]: [INVERSION_COUNT]."
+65,Array,2,"Given the array [VALUES], find the kth smallest element.",Sort the array or use a min-heap to find the kth smallest element: [KTH_SMALLEST].
+66,Array,2,"Given the array [VALUES], find the maximum product of any two elements.","Find the two largest and two smallest elements, return the maximum product: [MAX_PRODUCT]."
+67,Array,3,"Given the array [VALUES], implement the Kadane's algorithm to find the maximum subarray sum.","```python
+def kadane(arr):
+    max_sum = current_sum = arr[0]
+    for i in range(1, len(arr)):
+        current_sum = max(arr[i], current_sum + arr[i])
+        max_sum = max(max_sum, current_sum)
+    return max_sum```"
+68,Array,3,"Given the array [VALUES], find all triplets that sum to zero using 3Sum algorithm.","```python
+def three_sum(arr):
+    arr.sort()
+    result = []
+    for i in range(len(arr)-2):
+        if i > 0 and arr[i] == arr[i-1]: continue
+        left, right = i+1, len(arr)-1
+        while left < right:
+            total = arr[i] + arr[left] + arr[right]
+            if total == 0:
+                result.append([arr[i], arr[left], arr[right]])
+                left += 1
+                right -= 1
+            elif total < 0: left += 1
+            else: right -= 1
+    return result```"
+69,Array,3,"In the array [VALUES], find the longest bitonic subarray (increases then decreases).","```python
+def longest_bitonic(arr):
+    n = len(arr)
+    inc = [1] * n  # increasing lengths
+    dec = [1] * n  # decreasing lengths
+    
+    for i in range(1, n):
+        if arr[i] > arr[i-1]:
+            inc[i] = inc[i-1] + 1
+    
+    for i in range(n-2, -1, -1):
+        if arr[i] > arr[i+1]:
+            dec[i] = dec[i+1] + 1
+    
+    return max(inc[i] + dec[i] - 1 for i in range(n))```"
+70,Array,3,"Given the array [VALUES], find the equilibrium index where left sum equals right sum.","```python
+def equilibrium_index(arr):
+    total_sum = sum(arr)
+    left_sum = 0
+    for i in range(len(arr)):
+        if left_sum == total_sum - left_sum - arr[i]:
+            return i
+        left_sum += arr[i]
+    return -1```"
+71,Array,3,"In the array [VALUES], find minimum jumps to reach end where each element is max jump length.","```python
+def min_jumps(arr):
+    if len(arr) <= 1: return 0
+    if arr[0] == 0: return -1
+    
+    jumps = 1
+    max_reach = arr[0]
+    steps = arr[0]
+    
+    for i in range(1, len(arr)):
+        if i == len(arr) - 1: return jumps
+        max_reach = max(max_reach, i + arr[i])
+        steps -= 1
+        if steps == 0:
+            jumps += 1
+            if i >= max_reach: return -1
+            steps = max_reach - i
+    return -1```"
+72,Array,3,"Given the array [VALUES], rearrange it so that arr[i] becomes arr[arr[i]] with O(1) space.","```python
+def rearrange(arr):
+    n = len(arr)
+    for i in range(n):
+        arr[i] += (arr[arr[i]] % n) * n
+    for i in range(n):
+        arr[i] //= n```"
+73,Array,3,"In array [VALUES], find maximum difference between elements where larger comes after smaller.","```python
+def max_difference(arr):
+    min_element = arr[0]
+    max_diff = arr[1] - arr[0]
+    for i in range(1, len(arr)):
+        max_diff = max(max_diff, arr[i] - min_element)
+        min_element = min(min_element, arr[i])
+    return max_diff```"
+74,Array,3,"Given array [VALUES], implement Dutch National Flag algorithm for 0s, 1s, 2s.","```python
+def dutch_flag(arr):
+    low = mid = 0
+    high = len(arr) - 1
+    while mid <= high:
+        if arr[mid] == 0:
+            arr[low], arr[mid] = arr[mid], arr[low]
+            low += 1
+            mid += 1
+        elif arr[mid] == 1:
+            mid += 1
+        else:
+            arr[mid], arr[high] = arr[high], arr[mid]
+            high -= 1```"
+75,Array,3,"In array [VALUES], find the smallest positive missing number.","```python
+def first_missing_positive(arr):
+    n = len(arr)
+    for i in range(n):
+        while 1 <= arr[i] <= n and arr[arr[i]-1] != arr[i]:
+            arr[arr[i]-1], arr[i] = arr[i], arr[arr[i]-1]
+    
+    for i in range(n):
+        if arr[i] != i + 1:
+            return i + 1
+    return n + 1```"
+76,Array,3,"Given array [VALUES], find maximum product subarray.","```python
+def max_product_subarray(arr):
+    max_prod = min_prod = result = arr[0]
+    for i in range(1, len(arr)):
+        if arr[i] < 0:
+            max_prod, min_prod = min_prod, max_prod
+        max_prod = max(arr[i], max_prod * arr[i])
+        min_prod = min(arr[i], min_prod * arr[i])
+        result = max(result, max_prod)
+    return result```"
+77,Array,3,Implement sliding window maximum for array [VALUES] with window size 3.,"```python
+from collections import deque
+def sliding_window_max(arr, k):
+    dq = deque()
+    result = []
+    for i in range(len(arr)):
+        while dq and dq[0] <= i - k:
+            dq.popleft()
+        while dq and arr[dq[-1]] <= arr[i]:
+            dq.pop()
+        dq.append(i)
+        if i >= k - 1:
+            result.append(arr[dq[0]])
+    return result```"
+78,Array,3,"Given array [VALUES], find longest increasing subsequence length.","```python
+def lis_length(arr):
+    from bisect import bisect_left
+    tails = []
+    for num in arr:
+        pos = bisect_left(tails, num)
+        if pos == len(tails):
+            tails.append(num)
+        else:
+            tails[pos] = num
+    return len(tails)```"
+79,Array,3,Implement merge sort for array [VALUES] and return sorted array.,"```python
+def merge_sort(arr):
+    if len(arr) <= 1: return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return merge(left, right)
+
+def merge(left, right):
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result```"
+80,Array,3,"Given array [VALUES], implement quick sort with random pivot.","```python
+import random
+def quick_sort(arr, low=0, high=None):
+    if high is None: high = len(arr) - 1
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort(arr, low, pi - 1)
+        quick_sort(arr, pi + 1, high)
+
+def partition(arr, low, high):
+    random_index = random.randint(low, high)
+    arr[random_index], arr[high] = arr[high], arr[random_index]
+    pivot = arr[high]
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1```"
+81,Array,3,Find all subarrays in [VALUES] with sum equal to target value 100.,"```python
+def subarrays_with_sum(arr, target):
+    result = []
+    for i in range(len(arr)):
+        current_sum = 0
+        for j in range(i, len(arr)):
+            current_sum += arr[j]
+            if current_sum == target:
+                result.append(arr[i:j+1])
+    return result```"
+82,Array,3,"Given the array [VALUES], find the smallest subarray with a sum greater than [TARGET_SUM].",Use a sliding window to find the smallest subarray with sum > [TARGET_SUM]: [SMALLEST_SUBARRAY].
+83,Array,3,"Given the array [VALUES], find the maximum sum of a circular subarray.",Use Kadane's algorithm for both normal and circular cases: [MAX_CIRCULAR_SUM].
+84,Array,3,"Given the array [VALUES], find the minimum number of swaps required to sort the array.",Count cycles in the array to determine minimum swaps: [MIN_SWAPS].
+85,Array,3,"Given the array [VALUES], find the maximum sum of non-adjacent elements.",Use dynamic programming to find the maximum sum of non-adjacent elements: [MAX_NON_ADJ_SUM].
+86,Array,3,"Given the array [VALUES], find the equilibrium index (sum of left elements equals sum of right elements).",Find the index where the sum of elements to the left equals the sum to the right: [EQUILIBRIUM_INDEX].
+87,Singly Linked List,1,"Given a singly linked list with head pointing to node with value [HEAD] and values [VALUES], what is the value of the head node?",The value of the head node is [HEAD].
+88,Singly Linked List,1,"Given a singly linked list with head node [HEAD] and values [VALUES], what is the value of the tail node?",The value of the tail node is [TAIL]. The tail is the last node whose next pointer is NULL.
+89,Singly Linked List,1,Find the length of the singly linked list with head [HEAD] and values [VALUES].,Traverse from head to tail counting nodes. The length is [LENGTH].
+90,Singly Linked List,1,"Given a singly linked list with head [HEAD] and values [VALUES], what is the value at the 3rd node?","Starting from head [HEAD], traverse 2 more nodes to reach the 3rd node with value [VALUE]."
+91,Singly Linked List,1,Find the sum of all values in the singly linked list with head [HEAD] and values [VALUES].,Traverse all nodes and sum their values. The sum is [SUM].
+92,Singly Linked List,1,"Given a singly linked list with head [HEAD] and values [VALUES], insert a new node with value 42 at the beginning.","Create new node with value 42, set its next to current head [HEAD], update head to point to new node."
+93,Singly Linked List,1,"Given a singly linked list with head [HEAD] and values [VALUES], insert a new node with value 42 at the end.","Traverse to tail node [TAIL], create new node with value 42, set tail's next to new node."
+94,Singly Linked List,1,Find the largest value in the singly linked list with head [HEAD] and values [VALUES].,Traverse all nodes comparing values. The largest value is [MAX].
+95,Singly Linked List,1,Find the smallest value in the singly linked list with head [HEAD] and values [VALUES].,Traverse all nodes comparing values. The smallest value is [MIN].
+96,Singly Linked List,1,"Given a singly linked list with head [HEAD] and values [VALUES], delete the first node.",Update head to point to head.next. The new head becomes the second node.
+97,Singly Linked List,1,"In singly linked list with head [HEAD] and values [VALUES], search for value 50.",Traverse from head comparing each node's value with 50 until found or reach end.
+98,Singly Linked List,1,"Given singly linked list with head [HEAD] and values [VALUES], print all values.","Start from head [HEAD], print current value, move to next until NULL."
+99,Singly Linked List,1,Count even numbers in singly linked list with head [HEAD] and values [VALUES].,"Traverse all nodes, count those with value % 2 == 0."
+100,Singly Linked List,1,Find second node value in singly linked list with head [HEAD] and values [VALUES].,"From head [HEAD], move to head.next to get second node value."
+101,Singly Linked List,1,Check if singly linked list with head [HEAD] and values [VALUES] is empty.,"List is empty if head is NULL, otherwise it contains nodes."
+102,Singly Linked List,1,"Given a singly linked list [VALUES], what is the value at the head node?",The value at the head node is [HEAD].
+103,Singly Linked List,1,"Given a singly linked list [VALUES], what is the value at the tail node?",The value at the tail node is [TAIL].
+104,Singly Linked List,1,"Given a singly linked list [VALUES], what is the length of the list?",The length of the list is [LENGTH].
+105,Singly Linked List,1,"Given a singly linked list [VALUES], what is the value at index 2?",The value at index 2 is [VALUE_AT_2].
+106,Singly Linked List,1,"Given a singly linked list [VALUES], what is the sum of all node values?",The sum of all node values is [SUM].
+107,Singly Linked List,1,"Given a singly linked list [VALUES], what is the maximum value in the list?",The maximum value is [MAX].
+108,Singly Linked List,1,"Given a singly linked list [VALUES], what is the minimum value in the list?",The minimum value is [MIN].
+109,Singly Linked List,1,"Given a singly linked list [VALUES], what is the value of the node after the head?",The value after the head is [SECOND].
+110,Singly Linked List,1,"Given a singly linked list [VALUES], what is the result after reversing the list?",The reversed list is [REVERSED].
+111,Singly Linked List,1,"Given a singly linked list [VALUES], what is the value at the middle node?",The value at the middle node is [MIDDLE].
+112,Singly Linked List,1,"Given a singly linked list [VALUES], what is the result after removing the head node?",The list after removing the head is [WITHOUT_HEAD].
+113,Singly Linked List,1,"Given a singly linked list [VALUES], what is the result after removing the tail node?",The list after removing the tail is [WITHOUT_TAIL].
+114,Singly Linked List,1,"Given a singly linked list [VALUES], what is the result after inserting 100 at the head?",The list after inserting 100 at the head is [INSERTED_HEAD].
+115,Singly Linked List,1,"Given a singly linked list [VALUES], what is the result after inserting 100 at the tail?",The list after inserting 100 at the tail is [INSERTED_TAIL].
+116,Singly Linked List,1,"Given a singly linked list [VALUES], what is the result after deleting the node at index 2?",The list after deleting index 2 is [DELETED_INDEX_2].
+117,Singly Linked List,2,"Given a singly linked list with head [HEAD] and values [VALUES], reverse it.","```python
+def reverse_list(head):
+    prev = None
+    current = head
+    while current:
+        next_temp = current.next
+        current.next = prev
+        prev = current
+        current = next_temp
+    return prev```"
+118,Singly Linked List,2,Find the middle node of singly linked list with head [HEAD] and values [VALUES] using slow-fast pointer.,"```python
+def find_middle(head):
+    slow = fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+    return slow```"
+119,Singly Linked List,2,"Given singly linked list with head [HEAD] and values [VALUES], detect if it has a cycle.","```python
+def has_cycle(head):
+    slow = fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            return True
+    return False```"
+120,Singly Linked List,2,Remove all nodes with even values from singly linked list with head [HEAD] and values [VALUES].,"```python
+def remove_even(head):
+    dummy = ListNode(0)
+    dummy.next = head
+    prev = dummy
+    current = head
+    while current:
+        if current.val % 2 == 0:
+            prev.next = current.next
+        else:
+            prev = current
+        current = current.next
+    return dummy.next```"
+121,Singly Linked List,2,Delete node at position 3 in singly linked list with head [HEAD] and values [VALUES].,"```python
+def delete_at_position(head, pos):
+    if pos == 0: return head.next
+    current = head
+    for i in range(pos - 1):
+        current = current.next
+    current.next = current.next.next
+    return head```"
+122,Singly Linked List,2,Merge two sorted singly linked lists with heads [HEAD1] and [HEAD2].,"```python
+def merge_sorted(l1, l2):
+    dummy = ListNode(0)
+    current = dummy
+    while l1 and l2:
+        if l1.val <= l2.val:
+            current.next = l1
+            l1 = l1.next
+        else:
+            current.next = l2
+            l2 = l2.next
+        current = current.next
+    current.next = l1 or l2
+    return dummy.next```"
+123,Singly Linked List,2,Find nth node from end in singly linked list with head [HEAD] and values [VALUES].,"```python
+def nth_from_end(head, n):
+    first = second = head
+    for i in range(n):
+        first = first.next
+    while first:
+        first = first.next
+        second = second.next
+    return second```"
+124,Singly Linked List,2,Remove duplicates from sorted singly linked list with head [HEAD] and values [VALUES].,"```python
+def remove_duplicates(head):
+    current = head
+    while current and current.next:
+        if current.val == current.next.val:
+            current.next = current.next.next
+        else:
+            current = current.next
+    return head```"
+125,Singly Linked List,2,Rotate singly linked list with head [HEAD] and values [VALUES] to the right by k places.,"```python
+def rotate_right(head, k):
+    if not head or k == 0: return head
+    length = 1
+    tail = head
+    while tail.next:
+        tail = tail.next
+        length += 1
+    k = k % length
+    if k == 0: return head
+    
+    new_tail = head
+    for i in range(length - k - 1):
+        new_tail = new_tail.next
+    new_head = new_tail.next
+    new_tail.next = None
+    tail.next = head
+    return new_head```"
+126,Singly Linked List,2,Check if singly linked list with head [HEAD] and values [VALUES] is palindrome.,"```python
+def is_palindrome(head):
+    # Find middle and reverse second half
+    slow = fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+    
+    # Reverse second half
+    prev = None
+    while slow:
+        next_temp = slow.next
+        slow.next = prev
+        prev = slow
+        slow = next_temp
+    
+    # Compare
+    while prev:
+        if head.val != prev.val:
+            return False
+        head = head.next
+        prev = prev.next
+    return True```"
+127,Singly Linked List,2,Add two numbers represented as singly linked lists with heads [HEAD1] and [HEAD2].,"```python
+def add_two_numbers(l1, l2):
+    dummy = ListNode(0)
+    current = dummy
+    carry = 0
+    while l1 or l2 or carry:
+        val1 = l1.val if l1 else 0
+        val2 = l2.val if l2 else 0
+        total = val1 + val2 + carry
+        carry = total // 10
+        current.next = ListNode(total % 10)
+        current = current.next
+        if l1: l1 = l1.next
+        if l2: l2 = l2.next
+    return dummy.next```"
+128,Singly Linked List,2,Swap nodes in pairs in singly linked list with head [HEAD] and values [VALUES].,"```python
+def swap_pairs(head):
+    dummy = ListNode(0)
+    dummy.next = head
+    prev = dummy
+    while prev.next and prev.next.next:
+        first = prev.next
+        second = prev.next.next
+        prev.next = second
+        first.next = second.next
+        second.next = first
+        prev = first
+    return dummy.next```"
+129,Singly Linked List,2,Find intersection point of two singly linked lists with heads [HEAD1] and [HEAD2].,"```python
+def get_intersection(headA, headB):
+    if not headA or not headB: return None
+    pA, pB = headA, headB
+    while pA != pB:
+        pA = pA.next if pA else headB
+        pB = pB.next if pB else headA
+    return pA```"
+130,Singly Linked List,2,Sort singly linked list with head [HEAD] and values [VALUES] using merge sort.,"```python
+def sort_list(head):
+    if not head or not head.next: return head
+    
+    # Find middle
+    slow = fast = head
+    prev = None
+    while fast and fast.next:
+        prev = slow
+        slow = slow.next
+        fast = fast.next.next
+    prev.next = None
+    
+    # Recursively sort both halves
+    left = sort_list(head)
+    right = sort_list(slow)
+    
+    # Merge sorted halves
+    return merge_sorted(left, right)```"
+131,Singly Linked List,2,Remove nth node from end of singly linked list with head [HEAD] and values [VALUES].,"```python
+def remove_nth_from_end(head, n):
+    dummy = ListNode(0)
+    dummy.next = head
+    first = second = dummy
+    for i in range(n + 1):
+        first = first.next
+    while first:
+        first = first.next
+        second = second.next
+    second.next = second.next.next
+    return dummy.next```"
+132,Singly Linked List,2,"Given a singly linked list [VALUES], find the index of the maximum value.",The index of the maximum value [MAX] is [MAX_INDEX].
+133,Singly Linked List,2,"Given a singly linked list [VALUES], find the index of the minimum value.",The index of the minimum value [MIN] is [MIN_INDEX].
+134,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after removing all even values?",The list after removing even values is [NO_EVEN].
+135,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after removing all odd values?",The list after removing odd values is [NO_ODD].
+136,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after doubling each value?",The list after doubling each value is [DOUBLED].
+137,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after squaring each value?",The list after squaring each value is [SQUARED].
+138,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after removing all duplicate values?",The list after removing duplicates is [NO_DUPLICATES].
+139,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after rotating right by 2 positions?",The list after rotating right by 2 is [ROTATED_RIGHT_2].
+140,Singly Linked List,2,"Given a singly linked list [VALUES], what is the sum of values at even indices?","Sum values at indices 0, 2, 4, ... to get [SUM_EVEN_INDICES]."
+141,Singly Linked List,2,"Given a singly linked list [VALUES], what is the sum of values at odd indices?","Sum values at indices 1, 3, 5, ... to get [SUM_ODD_INDICES]."
+142,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after reversing the first three nodes?",Reverse the first three nodes to get [REVERSED_FIRST_THREE].
+143,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after swapping the first and last nodes?",Swap first and last nodes to get [SWAPPED_FIRST_LAST].
+144,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after inserting 100 at index 2?",Insert 100 at index 2 to get [INSERTED_100_INDEX_2].
+145,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after deleting all nodes with value 0?",Delete all nodes with value 0 to get [NO_ZERO].
+146,Singly Linked List,2,"Given a singly linked list [VALUES], what is the result after removing all nodes greater than 50?",Remove all nodes greater than 50 to get [NO_GREATER_50].
+147,Singly Linked List,3,"Given a singly linked list [VALUES], detect if there is a cycle.",Use Floyd's cycle detection algorithm. Cycle exists: [CYCLE_EXISTS].
+148,Singly Linked List,3,"Given a singly linked list [VALUES], find the starting node of the cycle if it exists.",The starting node of the cycle is [CYCLE_START].
+149,Singly Linked List,3,"Given a singly linked list [VALUES], reverse nodes in groups of k.",Reverse every k nodes in the list: [REVERSED_GROUPS].
+150,Singly Linked List,3,"Given a singly linked list [VALUES], check if it is a palindrome.",The list is [PALINDROME/NOT_PALINDROME].
+151,Singly Linked List,3,"Given a singly linked list [VALUES], sort the list using merge sort.",The sorted list is [SORTED_LIST].
+152,Singly Linked List,3,"Given a singly linked list [VALUES], remove all nodes with duplicate values.",Traverse and remove duplicate nodes: [NO_DUPLICATES].
+153,Singly Linked List,3,"Given a singly linked list [VALUES], rotate the list to the left by k positions.",Rotate left by k positions: [ROTATED_LEFT_K].
+154,Singly Linked List,3,"Given a singly linked list [VALUES], rotate the list to the right by k positions.",Rotate right by k positions: [ROTATED_RIGHT_K].
+155,Singly Linked List,3,"Given a singly linked list [VALUES], remove the Nth node from the end.",Remove the Nth node from the end: [REMOVED_NTH_FROM_END].
+156,Singly Linked List,3,"Given a singly linked list [VALUES], partition the list around value X.",Partition the list so that all nodes less than X come before nodes greater than or equal to X: [PARTITIONED].
+157,Singly Linked List,3,"Given a singly linked list [VALUES], find the intersection node with another list [VALUES2].",The intersection node is [INTERSECTION_NODE].
+158,Singly Linked List,3,"Given a singly linked list [VALUES], remove all nodes with value X.",Remove all nodes with value X: [NO_X].
+159,Singly Linked List,3,"Given a singly linked list [VALUES], swap every two adjacent nodes.",Swap every two adjacent nodes: [SWAPPED_PAIRS].
+160,Singly Linked List,3,"Given a singly linked list [VALUES], find the length of the longest palindrome sublist.",The length of the longest palindrome sublist is [LONGEST_PALINDROME].
+161,Singly Linked List,3,"Given a singly linked list [VALUES], flatten a multilevel linked list.",Flatten the multilevel list into a single-level list: [FLATTENED].
+162,Singly Linked List,3,"Given a singly linked list [VALUES], add two numbers represented by two lists.",Sum the two numbers and return as a linked list: [SUM_LIST].
+163,Singly Linked List,3,"Given a singly linked list [VALUES], reverse alternate k nodes.",Reverse every alternate group of k nodes: [REVERSED_ALTERNATE_K].
+164,Singly Linked List,3,"Given a singly linked list [VALUES], clone the list with random pointers.",Clone the list including random pointers: [CLONED_LIST].
+165,Singly Linked List,3,"Given a singly linked list [VALUES], find the node where the cycle begins.",The node where the cycle begins is [CYCLE_START_NODE].
+166,Singly Linked List,3,"Given a singly linked list [VALUES], reverse the list recursively.",Reverse the list using recursion: [REVERSED_RECURSIVE].
+167,Singly Linked List,3,"Given a singly linked list [VALUES], remove all nodes with value X.",Remove all nodes with value X: [NO_X].
+168,Singly Linked List,3,"Given a singly linked list [VALUES], swap every two adjacent nodes.",Swap every two adjacent nodes: [SWAPPED_PAIRS].
+169,Singly Linked List,3,"Given a singly linked list [VALUES], rotate the list to the left by k positions.",Rotate left by k positions: [ROTATED_LEFT_K].
+170,Singly Linked List,3,"Given a singly linked list [VALUES], rotate the list to the right by k positions.",Rotate right by k positions: [ROTATED_RIGHT_K].
+171,Singly Linked List,3,"Given a singly linked list [VALUES], remove the Nth node from the end.",Remove the Nth node from the end: [REMOVED_NTH_FROM_END].
+172,Singly Linked List,3,"Given a singly linked list [VALUES], partition the list around value X.",Partition the list so that all nodes less than X come before nodes greater than or equal to X: [PARTITIONED].
+173,Singly Linked List,3,"Given a singly linked list [VALUES], find the intersection node with another list [VALUES2].",The intersection node is [INTERSECTION_NODE].
+174,Singly Linked List,3,"Given a singly linked list [VALUES], remove all nodes with value X.",Remove all nodes with value X: [NO_X].
+175,Singly Linked List,3,"Given a singly linked list [VALUES], swap every two adjacent nodes.",Swap every two adjacent nodes: [SWAPPED_PAIRS].
+176,Singly Linked List,3,"Given a singly linked list [VALUES], find the length of the longest palindrome sublist.",The length of the longest palindrome sublist is [LONGEST_PALINDROME].
+177,Singly Linked List,3,"Given a singly linked list [VALUES], flatten a multilevel linked list.",Flatten the multilevel list into a single-level list: [FLATTENED].
+178,Singly Linked List,3,"Given a singly linked list [VALUES], add two numbers represented by two lists.",Sum the two numbers and return as a linked list: [SUM_LIST].
+179,Singly Linked List,3,"Given a singly linked list [VALUES], reverse alternate k nodes.",Reverse every alternate group of k nodes: [REVERSED_ALTERNATE_K].
+180,Singly Linked List,3,"Given a singly linked list [VALUES], clone the list with random pointers.",Clone the list including random pointers: [CLONED_LIST].
+181,Singly Linked List,3,"Given a singly linked list [VALUES], find the node where the cycle begins.",The node where the cycle begins is [CYCLE_START_NODE].
+182,Doubly Linked List,1,"Given a doubly linked list with head [HEAD] and values [VALUES], what is the value of the head node?","The value of the head node is [HEAD]. In doubly linked list, head.prev is NULL."
+183,Doubly Linked List,1,"In doubly linked list with head [HEAD] and values [VALUES], what is the tail node value?","The tail node value is [TAIL]. In doubly linked list, tail.next is NULL."
+184,Doubly Linked List,1,Find length of doubly linked list with head [HEAD] and values [VALUES].,Traverse from head to tail counting nodes. Length is [LENGTH].
+185,Doubly Linked List,1,"Given doubly linked list with head [HEAD] and values [VALUES], traverse backwards from tail.","Start from tail [TAIL], use prev pointers to traverse: [REVERSED]."
+186,Doubly Linked List,1,Insert node with value 42 at beginning of doubly linked list with head [HEAD].,"Create new node, set new.next = head, head.prev = new, update head = new."
+187,Doubly Linked List,1,Insert node with value 42 at end of doubly linked list with head [HEAD] and values [VALUES].,"Find tail [TAIL], create new node, set tail.next = new, new.prev = tail."
+188,Doubly Linked List,1,Delete first node from doubly linked list with head [HEAD] and values [VALUES].,"Update head = head.next, set new head.prev = NULL."
+189,Doubly Linked List,1,Delete last node from doubly linked list with head [HEAD] and values [VALUES].,"Find tail [TAIL], update tail.prev.next = NULL."
+190,Doubly Linked List,1,Search for value 50 in doubly linked list with head [HEAD] and values [VALUES].,Traverse from head comparing each node's value with 50.
+191,Doubly Linked List,1,Find sum of all values in doubly linked list with head [HEAD] and values [VALUES].,Traverse all nodes and sum their values. Sum is [SUM].
+192,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the value at the head node?",The value at the head node is [HEAD].
+193,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the value at the tail node?",The value at the tail node is [TAIL].
+194,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the length of the list?",The length of the list is [LENGTH].
+195,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the value at index 2?",The value at index 2 is [VALUE_AT_2].
+196,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after reversing the list?",The reversed list is [REVERSED].
+197,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after removing the head node?",The list after removing the head is [WITHOUT_HEAD].
+198,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after removing the tail node?",The list after removing the tail is [WITHOUT_TAIL].
+199,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after inserting 100 at the head?",The list after inserting 100 at the head is [INSERTED_HEAD].
+200,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after inserting 100 at the tail?",The list after inserting 100 at the tail is [INSERTED_TAIL].
+201,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after deleting the node at index 2?",The list after deleting index 2 is [DELETED_INDEX_2].
+202,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the sum of all node values?",The sum of all node values is [SUM].
+203,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the maximum value in the list?",The maximum value is [MAX].
+204,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the minimum value in the list?",The minimum value is [MIN].
+205,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the value at the previous node of index 2?",The value at the previous node of index 2 is [PREV_2].
+206,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the value at the next node of index 2?",The value at the next node of index 2 is [NEXT_2].
+207,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the value at the head node?",The value at the head node is [HEAD].
+208,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the value at the tail node?",The value at the tail node is [TAIL].
+209,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the length of the list?",The length of the list is [LENGTH].
+210,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the value at index 2?",The value at index 2 is [VALUE_AT_2].
+211,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after reversing the list?",The reversed list is [REVERSED].
+212,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after removing the head node?",The list after removing the head is [WITHOUT_HEAD].
+213,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after removing the tail node?",The list after removing the tail is [WITHOUT_TAIL].
+214,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after inserting 100 at the head?",The list after inserting 100 at the head is [INSERTED_HEAD].
+215,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after inserting 100 at the tail?",The list after inserting 100 at the tail is [INSERTED_TAIL].
+216,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the result after deleting the node at index 2?",The list after deleting index 2 is [DELETED_INDEX_2].
+217,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the sum of all node values?",The sum of all node values is [SUM].
+218,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the maximum value in the list?",The maximum value is [MAX].
+219,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the minimum value in the list?",The minimum value is [MIN].
+220,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the value at the previous node of index 2?",The value at the previous node of index 2 is [PREV_2].
+221,Doubly Linked List,1,"Given a doubly linked list [VALUES], what is the value at the next node of index 2?",The value at the next node of index 2 is [NEXT_2].
+222,Doubly Linked List,2,"Given a doubly linked list [VALUES], reverse the list recursively.",Reverse the list using recursion: [REVERSED_RECURSIVE].
+223,Doubly Linked List,2,"Given a doubly linked list [VALUES], remove all nodes with value X.",Remove all nodes with value X: [NO_X].
+224,Doubly Linked List,2,"Given a doubly linked list [VALUES], swap every two adjacent nodes.",Swap every two adjacent nodes: [SWAPPED_PAIRS].
+225,Doubly Linked List,2,"Given a doubly linked list [VALUES], rotate the list to the left by k positions.",Rotate left by k positions: [ROTATED_LEFT_K].
+226,Doubly Linked List,2,"Given a doubly linked list [VALUES], rotate the list to the right by k positions.",Rotate right by k positions: [ROTATED_RIGHT_K].
+227,Doubly Linked List,2,"Given a doubly linked list [VALUES], remove the Nth node from the end.",Remove the Nth node from the end: [REMOVED_NTH_FROM_END].
+228,Doubly Linked List,2,"Given a doubly linked list [VALUES], partition the list around value X.",Partition the list so that all nodes less than X come before nodes greater than or equal to X: [PARTITIONED].
+229,Doubly Linked List,2,"Given a doubly linked list [VALUES], find the intersection node with another list [VALUES2].",The intersection node is [INTERSECTION_NODE].
+230,Doubly Linked List,2,"Given a doubly linked list [VALUES], remove all nodes with duplicate values from a sorted list.",Remove all duplicates so only unique values remain: [ONLY_UNIQUE].
+231,Doubly Linked List,2,"Given a doubly linked list [VALUES], split the list into two halves.","Split the list into two halves: [FIRST_HALF], [SECOND_HALF]."
+232,Doubly Linked List,3,"Given a doubly linked list [VALUES], reverse the list in place.",Reverse the next and prev pointers for all nodes: [REVERSED].
+233,Doubly Linked List,3,"Given a doubly linked list [VALUES], remove all nodes with duplicate values.",Traverse and remove duplicate nodes: [NO_DUPLICATES].
+234,Doubly Linked List,3,"Given a doubly linked list [VALUES], insert a node with value X before node with value Y.","Find node Y, insert new node before it: [INSERTED_BEFORE_Y]."
+235,Doubly Linked List,3,"Given a doubly linked list [VALUES], delete the node at position k.",Traverse to position k and remove the node: [DELETED_K].
+236,Doubly Linked List,3,"Given a doubly linked list [VALUES], check if the list is a palindrome.",Compare values from head and tail moving inward: [PALINDROME/NOT_PALINDROME].
+237,Circular Linked List,1,"Given a circular linked list with head [HEAD] and values [VALUES], what makes it circular?",The last node's next pointer points back to the head [HEAD] instead of NULL.
+238,Circular Linked List,1,"In circular linked list with head [HEAD] and values [VALUES], how do you detect the end?",Traverse until you reach the head again. No NULL pointers exist.
+239,Circular Linked List,1,Find length of circular linked list with head [HEAD] and values [VALUES].,"Start from head, count nodes until you return to head. Length is [LENGTH]."
+240,Circular Linked List,1,Insert node with value 42 at beginning of circular linked list with head [HEAD].,"Find tail (node pointing to head), create new node, update connections."
+241,Circular Linked List,1,Delete node with value X from circular linked list with head [HEAD] and values [VALUES].,"Find node and its previous, update prev.next = node.next."
+242,Circular Linked List,1,Convert singly linked list with head [HEAD] to circular linked list.,"Find tail node, set tail.next = head to make it circular."
+243,Circular Linked List,1,Check if linked list with head [HEAD] is circular.,Use Floyd's algorithm or traverse and check if you return to head.
+244,Circular Linked List,1,Split circular linked list with head [HEAD] and values [VALUES] into two halves.,"Find middle using slow-fast pointers, break and create two circular lists."
+245,Circular Linked List,1,Find maximum value in circular linked list with head [HEAD] and values [VALUES].,Traverse once starting from head until back to head. Max is [MAX].
+246,Circular Linked List,1,Reverse circular linked list with head [HEAD] and values [VALUES].,Similar to singly linked list reversal but maintain circular property.
+247,Circular Linked List,2,"Given a circular linked list [VALUES], detect if there is a cycle.",Traverse the list and check if you return to the head: [CYCLE_EXISTS].
+248,Circular Linked List,2,"Given a circular linked list [VALUES], remove all nodes with value X.",Remove all nodes with value X: [NO_X].
+249,Circular Linked List,2,"Given a circular linked list [VALUES], split the list into two halves.",Use slow and fast pointers to split the list: [SPLIT_HALVES].
+250,Circular Linked List,2,"Given a circular linked list [VALUES], insert a node with value Y after node with value X.",Find node X and insert new node after it: [INSERTED_AFTER_X].
+251,Circular Linked List,2,"Given a circular linked list [VALUES], reverse the list.",Reverse the next pointers while maintaining circularity: [REVERSED].
+252,Circular Linked List,3,"Given a circular linked list [VALUES], remove every kth node until only one node remains.",This is the Josephus problem. The last remaining node is [LAST_NODE].
+253,Circular Linked List,3,"Given a circular linked list [VALUES], check if the list is a palindrome.",Compare values from head moving forward and backward: [PALINDROME/NOT_PALINDROME].
+254,Circular Linked List,3,"Given a circular linked list [VALUES], merge two sorted circular linked lists.",Merge both lists and maintain circular property: [MERGED_LIST].
+255,Circular Linked List,3,"Given a circular linked list [VALUES], find the length of the longest sequence of identical values.",Traverse and track the longest sequence: [LONGEST_SEQUENCE].
+256,Circular Linked List,3,"Given a circular linked list [VALUES], delete alternate nodes.",Delete every second node in the list: [ALTERNATE_DELETED].
+257,Tree,1,"Given a binary tree with root [ROOT] and values [VALUES], what is the root node value?",The root node value is [ROOT]. This is the topmost node of the tree.
+258,Tree,1,Find the height of binary tree with root [ROOT] and values [VALUES].,"Height is the longest path from root to leaf. Use recursive approach: height = 1 + max(left_height, right_height)."
+259,Tree,1,Count total nodes in binary tree with root [ROOT] and values [VALUES].,Recursively count: total = 1 + count(left) + count(right). Total nodes: [COUNT].
+260,Tree,1,Find all leaf nodes in binary tree with root [ROOT] and values [VALUES].,Leaf nodes have no children (left == NULL && right == NULL). Leaves: [LEAVES].
+261,Tree,1,Perform inorder traversal of binary tree with root [ROOT] and values [VALUES].,Inorder: Left -> Root -> Right. Result: [INORDER].
+262,Tree,1,Perform preorder traversal of binary tree with root [ROOT] and values [VALUES].,Preorder: Root -> Left -> Right. Result: [PREORDER].
+263,Tree,1,Perform postorder traversal of binary tree with root [ROOT] and values [VALUES].,Postorder: Left -> Right -> Root. Result: [POSTORDER].
+264,Tree,1,Find sum of all node values in binary tree with root [ROOT] and values [VALUES].,Recursively sum all nodes: sum = root.val + sum(left) + sum(right). Sum: [SUM].
+265,Tree,1,What is the left child of root in binary tree with root [ROOT] and values [VALUES]?,The left child of root [ROOT] has value [LEFT_CHILD].
+266,Tree,1,What is the right child of root in binary tree with root [ROOT] and values [VALUES]?,The right child of root [ROOT] has value [RIGHT_CHILD].
+267,Tree,1,Find maximum value in binary tree with root [ROOT] and values [VALUES].,Traverse all nodes and track maximum. Maximum value: [MAX].
+268,Tree,1,Find minimum value in binary tree with root [ROOT] and values [VALUES].,Traverse all nodes and track minimum. Minimum value: [MIN].
+269,Tree,1,Check if binary tree with root [ROOT] is empty.,"Tree is empty if root is NULL, otherwise it contains nodes."
+270,Tree,1,Find depth of a specific node with value X in binary tree with root [ROOT].,Depth is distance from root. Use BFS or DFS to find node and track depth.
+271,Tree,1,Count internal nodes in binary tree with root [ROOT] and values [VALUES].,Internal nodes have at least one child. Count = Total nodes - Leaf nodes.
+272,Tree,1,"Given a binary tree with values [VALUES], what is the value at the root?",The value at the root is [ROOT].
+273,Tree,1,"Given a binary tree with values [VALUES], what is the height of the tree?",The height of the tree is [HEIGHT].
+274,Tree,1,"Given a binary tree with values [VALUES], what is the number of leaf nodes?",The number of leaf nodes is [LEAF_COUNT].
+275,Tree,1,"Given a binary tree with values [VALUES], what is the sum of all node values?",The sum of all node values is [SUM].
+276,Tree,1,"Given a binary tree with values [VALUES], what is the maximum value in the tree?",The maximum value is [MAX].
+277,Tree,1,"Given a binary tree with values [VALUES], what is the minimum value in the tree?",The minimum value is [MIN].
+278,Tree,1,"Given a binary tree with values [VALUES], what is the result of an inorder traversal?",The inorder traversal is [INORDER].
+279,Tree,1,"Given a binary tree with values [VALUES], what is the result of a preorder traversal?",The preorder traversal is [PREORDER].
+280,Tree,1,"Given a binary tree with values [VALUES], what is the result of a postorder traversal?",The postorder traversal is [POSTORDER].
+281,Tree,1,"Given a binary tree with values [VALUES], what is the result of a level order traversal?",The level order traversal is [LEVELORDER].
+282,Tree,1,"Given a binary tree with values [VALUES], what is the value at the leftmost node?",The value at the leftmost node is [LEFTMOST].
+283,Tree,1,"Given a binary tree with values [VALUES], what is the value at the rightmost node?",The value at the rightmost node is [RIGHTMOST].
+284,Tree,1,"Given a binary tree with values [VALUES], what is the number of nodes at level 2?",The number of nodes at level 2 is [LEVEL2_COUNT].
+285,Tree,1,"Given a binary tree with values [VALUES], what is the sum of all leaf node values?",The sum of all leaf node values is [LEAF_SUM].
+286,Tree,1,"Given a binary tree with values [VALUES], what is the maximum depth of the tree?",The maximum depth is [MAX_DEPTH].
+287,Tree,2,Check if binary tree with root [ROOT] and values [VALUES] is a Binary Search Tree.,"```python
+def is_bst(root, min_val=float('-inf'), max_val=float('inf')):
+    if not root: return True
+    if root.val <= min_val or root.val >= max_val: return False
+    return is_bst(root.left, min_val, root.val) and is_bst(root.right, root.val, max_val)```"
+288,Tree,2,Find diameter of binary tree with root [ROOT] and values [VALUES].,"```python
+def diameter(root):
+    def height(node):
+        if not node: return 0
+        left = height(node.left)
+        right = height(node.right)
+        self.diameter = max(self.diameter, left + right)
+        return 1 + max(left, right)
+    
+    self.diameter = 0
+    height(root)
+    return self.diameter```"
+289,Tree,2,Perform level order traversal of binary tree with root [ROOT] and values [VALUES].,"```python
+from collections import deque
+def level_order(root):
+    if not root: return []
+    result = []
+    queue = deque([root])
+    while queue:
+        level_size = len(queue)
+        level = []
+        for _ in range(level_size):
+            node = queue.popleft()
+            level.append(node.val)
+            if node.left: queue.append(node.left)
+            if node.right: queue.append(node.right)
+        result.append(level)
+    return result```"
+290,Tree,2,Find lowest common ancestor of nodes X and Y in binary tree with root [ROOT].,"```python
+def lca(root, p, q):
+    if not root or root == p or root == q:
+        return root
+    left = lca(root.left, p, q)
+    right = lca(root.right, p, q)
+    if left and right: return root
+    return left or right```"
+291,Tree,2,Convert binary tree with root [ROOT] to its mirror image.,"```python
+def mirror_tree(root):
+    if not root: return None
+    root.left, root.right = root.right, root.left
+    mirror_tree(root.left)
+    mirror_tree(root.right)
+    return root```"
+292,Tree,2,Check if binary tree with root [ROOT] and values [VALUES] is balanced.,"```python
+def is_balanced(root):
+    def height(node):
+        if not node: return 0
+        left = height(node.left)
+        right = height(node.right)
+        if left == -1 or right == -1 or abs(left - right) > 1:
+            return -1
+        return 1 + max(left, right)
+    return height(root) != -1```"
+293,Tree,2,Find all root-to-leaf paths in binary tree with root [ROOT] and values [VALUES].,"```python
+def root_to_leaf_paths(root):
+    def dfs(node, path, result):
+        if not node: return
+        path.append(node.val)
+        if not node.left and not node.right:
+            result.append(path[:])
+        else:
+            dfs(node.left, path, result)
+            dfs(node.right, path, result)
+        path.pop()
+    
+    result = []
+    dfs(root, [], result)
+    return result```"
+294,Tree,2,Find maximum width of binary tree with root [ROOT] and values [VALUES].,"```python
+from collections import deque
+def max_width(root):
+    if not root: return 0
+    max_w = 0
+    queue = deque([(root, 0)])
+    while queue:
+        level_size = len(queue)
+        _, first_index = queue[0]
+        for i in range(level_size):
+            node, index = queue.popleft()
+            if node.left: queue.append((node.left, 2 * index))
+            if node.right: queue.append((node.right, 2 * index + 1))
+        max_w = max(max_w, index - first_index + 1)
+    return max_w```"
+295,Tree,2,Check if binary tree with root [ROOT] and values [VALUES] is symmetric.,"```python
+def is_symmetric(root):
+    def is_mirror(left, right):
+        if not left and not right: return True
+        if not left or not right: return False
+        return (left.val == right.val and 
+                is_mirror(left.left, right.right) and                is_mirror(left.right, right.left))
+    return is_mirror(root.left, root.right) if root else True```"
+296,Tree,2,Find kth smallest element in BST with root [ROOT] and values [VALUES].,"```python
+def kth_smallest(root, k):
+    def inorder(node):
+        if not node: return
+        inorder(node.left)
+        self.count += 1
+        if self.count == k:
+            self.result = node.val
+            return
+        inorder(node.right)
+    
+    self.count = 0
+    self.result = 0
+    inorder(root)
+    return self.result```"
+297,Tree,2,Construct binary tree from inorder and preorder traversals.,"```python
+def build_tree(preorder, inorder):
+    if not preorder or not inorder: return None
+    root = TreeNode(preorder[0])
+    mid = inorder.index(preorder[0])
+    root.left = build_tree(preorder[1:mid+1], inorder[:mid])
+    root.right = build_tree(preorder[mid+1:], inorder[mid+1:])
+    return root```"
+298,Tree,2,Find vertical order traversal of binary tree with root [ROOT].,"```python
+from collections import defaultdict, deque
+def vertical_order(root):
+    if not root: return []
+    column_table = defaultdict(list)
+    queue = deque([(root, 0)])
+    while queue:
+        node, column = queue.popleft()
+        column_table[column].append(node.val)
+        if node.left: queue.append((node.left, column - 1))
+        if node.right: queue.append((node.right, column + 1))
+    return [column_table[x] for x in sorted(column_table.keys())]```"
+299,Tree,2,Find boundary traversal of binary tree with root [ROOT].,"```python
+def boundary_traversal(root):
+    if not root: return []
+    result = [root.val]
+    
+    def left_boundary(node):
+        if not node or (not node.left and not node.right): return
+        result.append(node.val)
+        if node.left: left_boundary(node.left)
+        else: left_boundary(node.right)
+    
+    def leaves(node):
+        if not node: return
+        if not node.left and not node.right:
+            result.append(node.val)
+        leaves(node.left)
+        leaves(node.right)
+    
+    def right_boundary(node):
+        if not node or (not node.left and not node.right): return
+        if node.right: right_boundary(node.right)
+        else: right_boundary(node.left)
+        result.append(node.val)
+    
+    left_boundary(root.left)
+    leaves(root)
+    right_boundary(root.right)
+    return result```"
+300,Tree,2,Convert binary tree with root [ROOT] to doubly linked list in-place.,"```python
+def tree_to_dll(root):
+    def convert(node):
+        if not node: return None, None
+        
+        left_head, left_tail = convert(node.left)
+        right_head, right_tail = convert(node.right)
+        
+        if left_tail:
+            left_tail.right = node
+            node.left = left_tail
+        
+        if right_head:
+            node.right = right_head
+            right_head.left = node
+        
+        head = left_head if left_head else node
+        tail = right_tail if right_tail else node
+        
+        return head, tail
+    
+    head, _ = convert(root)
+    return head```"
+301,Tree,2,Find sum of nodes at maximum depth in binary tree with root [ROOT].,"```python
+def sum_at_max_depth(root):
+    if not root: return 0
+    
+    def dfs(node, depth):
+        if not node: return 0, -1
+        if not node.left and not node.right:
+            return node.val, depth
+        
+        left_sum, left_depth = dfs(node.left, depth + 1)
+        right_sum, right_depth = dfs(node.right, depth + 1)
+        
+        if left_depth > right_depth:
+            return left_sum, left_depth
+        elif right_depth > left_depth:
+            return right_sum, right_depth
+        else:
+            return left_sum + right_sum, left_depth
+    
+    result, _ = dfs(root, 0)
+    return result```"
+302,Tree,2,"Given a binary tree with values [VALUES], find the path from root to node with value [TARGET].",The path from root to [TARGET] is [PATH].
+303,Tree,2,"Given a binary tree with values [VALUES], find the lowest common ancestor of nodes [A] and [B].",The lowest common ancestor of [A] and [B] is [LCA].
+304,Tree,2,"Given a binary tree with values [VALUES], check if the tree is balanced.",The tree is [BALANCED/NOT_BALANCED].
+305,Tree,2,"Given a binary tree with values [VALUES], check if the tree is a binary search tree.",The tree is [BST/NOT_BST].
+306,Tree,2,"Given a binary tree with values [VALUES], find the diameter of the tree.",The diameter of the tree is [DIAMETER].
+307,Tree,2,"Given a binary tree with values [VALUES], find the maximum width of the tree.",The maximum width is [MAX_WIDTH].
+308,Tree,2,"Given a binary tree with values [VALUES], find the sum of all nodes at the deepest level.",The sum at the deepest level is [DEEP_SUM].
+309,Tree,2,"Given a binary tree with values [VALUES], find the vertical order traversal.",The vertical order traversal is [VERTICAL_ORDER].
+310,Tree,2,"Given a binary tree with values [VALUES], find the boundary traversal.",The boundary traversal is [BOUNDARY].
+311,Tree,2,"Given a binary tree with values [VALUES], convert it to its mirror image.",The mirror image of the tree is [MIRROR].
+312,Tree,2,"Given a binary tree with values [VALUES], find all root-to-leaf paths.",All root-to-leaf paths are [ROOT_TO_LEAF_PATHS].
+313,Tree,2,"Given a binary tree with values [VALUES], find the kth smallest element.",The kth smallest element is [KTH_SMALLEST].
+314,Tree,2,"Given a binary tree with values [VALUES], construct the tree from inorder and preorder traversals.",The constructed tree is [CONSTRUCTED_TREE].
+315,Tree,2,"Given a binary tree with values [VALUES], check if the tree is symmetric.",The tree is [SYMMETRIC/NOT_SYMMETRIC].
+316,Tree,2,"Given a binary tree with values [VALUES], convert it to a doubly linked list in-place.",The doubly linked list is [DOUBLY_LINKED_LIST].
+317,Tree,3,"Given a binary tree with values [VALUES], find the maximum path sum.",The maximum path sum is [MAX_PATH_SUM].
+318,Tree,3,"Given a binary tree with values [VALUES], print the tree in spiral (zigzag) order.",The spiral order traversal is [SPIRAL_ORDER].
+319,Tree,3,"Given a binary tree with values [VALUES], find the distance between two nodes [A] and [B].",The distance between [A] and [B] is [DISTANCE].
+320,Tree,3,"Given a binary tree with values [VALUES], find the largest BST subtree.",The largest BST subtree has size [LARGEST_BST_SIZE].
+321,Tree,3,"Given a binary tree with values [VALUES], flatten the tree to a linked list in-place.",The flattened list is [FLATTENED_LIST].

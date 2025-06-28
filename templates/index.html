@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-container slide-up">
+    <h2>Generate Questions</h2>
+    <p>Select a topic, difficulty level, and the number of questions you want to practice with.</p>
+    
+    <form id="question-form">
+        <div class="form-group">
+            <label for="topic">Topic</label>
+            <select id="topic" class="form-control" required>
+                <option value="">Select a topic</option>
+                <option value="Array">Arrays</option>
+                <option value="Singly Linked List">Singly Linked Lists</option>
+                <option value="Doubly Linked List">Doubly Linked Lists</option>
+                <option value="Circular Linked List">Circular Linked Lists</option>
+                <option value="Tree">Trees</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="difficulty">Difficulty Level</label>
+            <select id="difficulty" class="form-control" required>
+                <option value="">Select a difficulty level</option>
+                <option value="1">Level 1 - Beginner</option>
+                <option value="2">Level 2 - Intermediate</option>
+                <option value="3">Level 3 - Advanced</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="num_questions">Number of Questions</label>
+            <select id="num_questions" class="form-control" required>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+        </div>
+        
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Generate Questions</button>
+        </div>
+    </form>
+</div>
+
+<div id="questions-container" class="questions-container">
+    <!-- Questions will be displayed here -->
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Any additional page-specific JavaScript can go here
+</script>
+{% endblock %}
