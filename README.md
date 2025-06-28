@@ -49,30 +49,32 @@ Auto-Question-Generator/
 ---
 ```
 ## 📦 Setup Instructions
-1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/indrajeet-77/Auto-Question-Generator-Akshara-Plus-Org-.git
-cd Auto-Question-Generator
-2. Create Virtual Environment (optional but recommended)
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-3. Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4. Run the App
-bash
-Copy
-Edit
-python app.py
-Visit http://127.0.0.1:5000/ in your browser.
 
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/indrajeet-77/Auto-Question-Generator-Akshara-Plus-Org-.git
+   cd Auto-Question-Generator
+   ```
+
+2. **Create Virtual Environment** (optional but recommended)
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the App**
+   ```bash
+   python app.py
+   ```
+
+5. **Access the Application**
+   
+   Visit http://127.0.0.1:5000/ in your browser.
 ## ⚙️ Core Functions
 load_questions(): Reads question data from CSV file.
 
